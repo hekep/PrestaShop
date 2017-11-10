@@ -497,10 +497,10 @@ class ParentOrderControllerCore extends FrontController
 
         $vars = array(
             'HOOK_BEFORECARRIER' => Hook::exec('displayBeforeCarrier', array(
-                'carriers' => $carriers,
-                'checked' => $checked,
-                'delivery_option_list' => $delivery_option_list,
-                'delivery_option' => $delivery_option
+                'carriers' => &$carriers,
+                'checked' => &$checked,
+                'delivery_option_list' => &$delivery_option_list,
+                'delivery_option' => &$delivery_option
             )),
             'advanced_payment_api' => $advanced_payment_api
         );
